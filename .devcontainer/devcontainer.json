@@ -1,0 +1,36 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers/features/dotnet:1": {
+			"version": "8"
+		},
+		"ghcr.io/jlaundry/devcontainer-features/azure-functions-core-tools:1": {},
+		"ghcr.io/devcontainers/features/powershell:1.1.0": {},
+        "ghcr.io/devcontainers/features/azure-cli:1.0.8": {},
+		"ghcr.io/azure/azure-dev/azd:latest": {},
+		"ghcr.io/devcontainers/features/python:1": {
+			"version": "3.11"
+		}
+
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-dotnettools.dotnet-interactive-vscode",
+				"ms-semantic-kernel.semantic-kernel",
+				"esbenp.prettier-vscode",
+				"ms-dotnettools.csdevkit",
+				"ms-azuretools.vscode-bicep",
+				"GitHub.copilot-chat",
+				"GitHub.copilot",
+				"ms-toolsai.jupyter",
+				"ms-python.python",
+				"ms-azuretools.vscode-docker",
+				"ms-toolsai.vscode-jupyter-cell-tags",
+				"ms-python.debugpy"
+			]
+		}
+	},
+	"postCreateCommand": "sudo chmod a+rwx /usr/share/dotnet" // avoids needing to run as 'sudo' when starting KernelHttpServer
+}
